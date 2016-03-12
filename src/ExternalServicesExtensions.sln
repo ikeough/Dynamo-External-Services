@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalServiceInterfaces", "ExternalServiceInterfaces\ExternalServiceInterfaces.csproj", "{35731695-DA79-4A87-8B77-AEF10683EDF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropboxService", "DropBoxService\DropboxService.csproj", "{8B7A82C4-72ED-4E6D-A6D5-6AD636F1DF23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropboxServiceTests", "DropBoxServiceTests\DropboxServiceTests.csproj", "{89CEF7A6-AA71-4073-8CFF-D1A07D41572C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalServicesExtension", "ExternalServicesExtension\ExternalServicesExtension.csproj", "{89084C7C-3FD7-4D69-B38E-8E24D40F929E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalServicesViewExtension", "ExternalServicesViewExtension\ExternalServicesViewExtension.csproj", "{3D3E5A1D-8E1A-4315-A4B1-64C86ADFE3E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35731695-DA79-4A87-8B77-AEF10683EDF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35731695-DA79-4A87-8B77-AEF10683EDF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35731695-DA79-4A87-8B77-AEF10683EDF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35731695-DA79-4A87-8B77-AEF10683EDF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B7A82C4-72ED-4E6D-A6D5-6AD636F1DF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B7A82C4-72ED-4E6D-A6D5-6AD636F1DF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B7A82C4-72ED-4E6D-A6D5-6AD636F1DF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B7A82C4-72ED-4E6D-A6D5-6AD636F1DF23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89CEF7A6-AA71-4073-8CFF-D1A07D41572C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89CEF7A6-AA71-4073-8CFF-D1A07D41572C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89CEF7A6-AA71-4073-8CFF-D1A07D41572C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89CEF7A6-AA71-4073-8CFF-D1A07D41572C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89084C7C-3FD7-4D69-B38E-8E24D40F929E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89084C7C-3FD7-4D69-B38E-8E24D40F929E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89084C7C-3FD7-4D69-B38E-8E24D40F929E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89084C7C-3FD7-4D69-B38E-8E24D40F929E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D3E5A1D-8E1A-4315-A4B1-64C86ADFE3E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3E5A1D-8E1A-4315-A4B1-64C86ADFE3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3E5A1D-8E1A-4315-A4B1-64C86ADFE3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3E5A1D-8E1A-4315-A4B1-64C86ADFE3E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
