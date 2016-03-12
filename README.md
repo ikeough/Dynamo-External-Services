@@ -1,2 +1,2 @@
-# Dynamo-OAuth-Services
-A repository to build OAuth-backed service integration into Dynamo.
+# Dynamo External Services
+A repository to build service integrations into Dynamo which require authentication.
