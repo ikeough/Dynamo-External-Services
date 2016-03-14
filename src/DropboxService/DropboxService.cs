@@ -77,7 +77,7 @@ namespace DropboxService
             return null;
         }
 
-        public Action Authenticate { get; set; }
+        public Func<Task<IOAuthAuthenticationData>> AuthenticateAsync { get; set; }
 
         public void ParseRedirectResponse(Uri uri)
         {
@@ -99,7 +99,7 @@ namespace DropboxService
         /// </para>
         /// </summary>
         /// <returns>A valid access token or null.</returns>
-        public void Login()
+        public async Task LoginAsync()
         {
             try
             {
@@ -108,7 +108,12 @@ namespace DropboxService
                     return;
                 }
 
-                Authenticate();
+                if (AuthenticateAsync == null)
+                {
+                    throw new Exception("No authentication method has been provided.");
+                }
+
+                AuthenticationData = await AuthenticateAsync();
             }
             catch (Exception e)
             {

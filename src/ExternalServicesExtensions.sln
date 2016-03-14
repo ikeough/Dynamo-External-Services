@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalServicesExtension",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalServicesViewExtension", "ExternalServicesViewExtension\ExternalServicesViewExtension.csproj", "{3D3E5A1D-8E1A-4315-A4B1-64C86ADFE3E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamo.Dropbox", "Dynamo.Dropbox\Dynamo.Dropbox.csproj", "{74D94A91-B489-42F7-A032-19290DE3A151}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3D3E5A1D-8E1A-4315-A4B1-64C86ADFE3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D3E5A1D-8E1A-4315-A4B1-64C86ADFE3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D3E5A1D-8E1A-4315-A4B1-64C86ADFE3E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74D94A91-B489-42F7-A032-19290DE3A151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74D94A91-B489-42F7-A032-19290DE3A151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74D94A91-B489-42F7-A032-19290DE3A151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74D94A91-B489-42F7-A032-19290DE3A151}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

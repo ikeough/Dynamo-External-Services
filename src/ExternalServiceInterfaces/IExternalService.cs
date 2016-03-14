@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace ExternalServiceInterfaces
 {
@@ -32,7 +33,7 @@ namespace ExternalServiceInterfaces
         /// <summary>
         /// Login to the service.
         /// </summary>
-        void Login();
+        Task LoginAsync();
 
         /// <summary>
         /// Logout of the service.
@@ -43,7 +44,7 @@ namespace ExternalServiceInterfaces
         /// A method representing the authentication sequence.
         /// </summary>
         /// <returns>A <see cref="TAuthData"/> object.</returns>
-        Action Authenticate { get; set; }
+        Func<Task<TAuthData>> AuthenticateAsync { get; set; }
 
         /// <summary>
         /// Get the client object provided by the service's API.

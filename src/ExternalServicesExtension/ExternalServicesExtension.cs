@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using DropboxService;
 using Dynamo.Extensions;
 using ExternalServiceInterfaces;
@@ -17,14 +18,14 @@ namespace ExternalServicesExtension
 
         public void Ready(ReadyParams sp)
         {
-            var dropBox = new DropBoxService { Authenticate = Authenticate };
+            var dropBox = new DropBoxService { AuthenticateAsync = Authenticate };
             
             OAuthServices.Instance.AddService(dropBox);
         }
 
-        private void Authenticate()
+        private Task<IOAuthAuthenticationData> Authenticate()
         {
-            return;
+            return null;
         }
 
         public void Shutdown()
