@@ -46,7 +46,7 @@ namespace Dynamo.Dropbox
                 await service.LoginAsync();
             }
 
-            var dropbox = service.GetClient() as DropboxClient;
+            var dropbox = service.Client as DropboxClient;
 
             if (dropbox == null)
             {

@@ -1,9 +1,10 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Threading.Tasks;
 
 namespace ExternalServiceInterfaces
 {
-    public interface IExternalService<TAuthData>
+    public interface IExternalService<TAuthData>: INotifyPropertyChanged
     {
         /// <summary>
         /// The Name of the service.
@@ -23,7 +24,10 @@ namespace ExternalServiceInterfaces
         /// </summary>
         Uri RedirectUri { get; }
 
-        string ApiKey { get; }
+        /// <summary>
+        /// The client object provided by the service.
+        /// </summary>
+        object Client { get; }
 
         /// <summary>
         /// A method that is called during redirect.
@@ -45,10 +49,5 @@ namespace ExternalServiceInterfaces
         /// </summary>
         /// <returns>A <see cref="TAuthData"/> object.</returns>
         Func<Task<TAuthData>> AuthenticateAsync { get; set; }
-
-        /// <summary>
-        /// Get the client object provided by the service's API.
-        /// </summary>
-        object GetClient();
     }
 }

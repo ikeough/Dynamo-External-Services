@@ -17,7 +17,7 @@ namespace ExternalServicesViewExtension
             InitializeComponent();
 
             this.service = service;
-
+            DataContext = service;
             Dispatcher.BeginInvoke(new Action<Uri>(this.Start), service.AuthorizationUri);
         }
 

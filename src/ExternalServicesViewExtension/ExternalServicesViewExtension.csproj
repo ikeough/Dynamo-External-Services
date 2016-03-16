@@ -112,11 +112,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExternalServiceMenuItem.xaml.cs">
+      <DependentUpon>ExternalServiceMenuItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ExternalServiceViewExtension.cs" />
     <Compile Include="LoginForm.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="ExternalServiceMenuItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginForm.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
