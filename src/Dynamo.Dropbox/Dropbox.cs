@@ -26,7 +26,7 @@ namespace Dynamo.Dropbox
             {
                 task.Wait();
             }
-            catch (Exception ex)
+            catch (AggregateException ex)
             {
                 throw;
             }
