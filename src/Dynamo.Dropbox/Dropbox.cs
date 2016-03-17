@@ -8,7 +8,7 @@ using ExternalServiceInterfaces;
 
 namespace Dynamo.Dropbox
 {
-    public class Dropbox
+    public static class Dropbox
     {
         private const string ServiceName = "Dropbox";
 
@@ -17,7 +17,8 @@ namespace Dynamo.Dropbox
         /// </summary>
         /// <param name="dropboxPath">The path to the file in your dropbox.
         /// The path will be of the form: /folder/subfolder/file.txt</param>
-        /// <returns></returns>
+        /// <returns>A path to the downloaded file on disk. This will be located in the current user's temp directory.
+        /// An exception will be thrown if the user is not logged in to Dropbox.</returns>
         public static string DownloadFileByPath(string dropboxPath)
         {
             var task = Task.Run(()=> _DownloadFileByDropboxPath(dropboxPath));

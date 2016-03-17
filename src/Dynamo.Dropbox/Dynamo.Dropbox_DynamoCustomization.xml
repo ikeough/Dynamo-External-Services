@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Dynamo.Dropbox</name>
+  </assembly>
+  <namespaces>
+    <namespace name="Dynamo.Dropbox">
+      <category>Dropbox</category>
+    </namespace>
+  </namespaces>
+</doc>

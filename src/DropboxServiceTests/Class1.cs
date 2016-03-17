@@ -1,5 +1,4 @@
-﻿using DropboxService;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace DropboxServiceTests
 {
