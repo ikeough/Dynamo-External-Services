@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Dropbox.Api;
+using Dropbox.Api.Files;
 using ExternalServiceInterfaces;
 
 namespace Dynamo.Dropbox
@@ -28,7 +30,12 @@ namespace Dynamo.Dropbox
             }
             catch (AggregateException ex)
             {
-                throw;
+                var error = "";
+                foreach (var innerEx in ex.InnerExceptions)
+                {
+                    error += innerEx.Message + "\n";
+                }
+                throw new Exception(error);
             }
 
             return task.Result;
@@ -60,15 +67,21 @@ namespace Dynamo.Dropbox
                 var folderPath = dropboxPath.Remove(lastSlash);
                 var fileName = dropboxPath.Substring(lastSlash + 1);
 
-                var list = await dropbox.Files.ListFolderAsync(folderPath, true);
-                foreach (var metadata in list.Entries)
+                var fileData = new List<Metadata>();
+
+                var list = await dropbox.Files.ListFolderAsync(folderPath, true,false,true);
+                do
                 {
-                    if (metadata.IsFile)
-                    {
-                        Console.WriteLine();
-                    }
+                    list = await dropbox.Files.ListFolderContinueAsync(list.Cursor);
+                    fileData.AddRange(list.Entries.Where(m => m.IsFile));
                 }
+                while (list.HasMore);
+                
                 var file = list.Entries.FirstOrDefault(i => i.IsFile && i.PathLower == dropboxPath.ToLower(CultureInfo.InvariantCulture));
+                if (file == null)
+                {
+                    throw new Exception("The request file could not be found.");
+                }
 
                 // Build a file path in the temp directory.
                 var tempDir = Path.GetTempPath();
