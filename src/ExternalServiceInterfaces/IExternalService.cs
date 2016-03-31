@@ -30,9 +30,17 @@ namespace ExternalServiceInterfaces
         object Client { get; }
 
         /// <summary>
-        /// A method that is called during redirect.
+        /// Use the callback uri to get the access token.
         /// </summary>
         void ParseRedirectResponse(Uri uri);
+
+        /// <summary>
+        /// Initialize the client object for the service given
+        /// an access token and a state.
+        /// </summary>
+        /// <param name="accessToken"></param>
+        /// <param name="state"></param>
+        void InitializeClient(string accessToken, string state);
 
         /// <summary>
         /// Login to the service.

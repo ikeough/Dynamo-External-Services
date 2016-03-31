@@ -100,13 +100,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DropBoxService\DropboxService.csproj">
-      <Project>{8b7a82c4-72ed-4e6d-a6d5-6ad636f1df23}</Project>
-      <Name>DropboxService</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ExternalServiceInterfaces\ExternalServiceInterfaces.csproj">
       <Project>{35731695-da79-4a87-8b77-aef10683edf2}</Project>
       <Name>ExternalServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExternalServiceTokens\ExternalServicesTokens.csproj">
+      <Project>{87e3fb8c-455c-4bef-91e5-445451356746}</Project>
+      <Name>ExternalServicesTokens</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
