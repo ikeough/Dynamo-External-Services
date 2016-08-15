@@ -18,10 +18,10 @@ namespace ExternalServicesViewExtension
         {
             if (DataContext == null) return;
 
-            var service = DataContext as IExternalService<IOAuthAuthenticationData>;
+            var service = DataContext as IExternalService;
             if (service == null) return;
 
-            if (service.AuthenticationData == null)
+            if (string.IsNullOrEmpty(service.AccessToken))
             {
                 var login = new LoginForm(service);
                 login.Show();

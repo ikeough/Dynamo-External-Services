@@ -14,7 +14,7 @@
             <MenuItem.Header>
                 <MultiBinding Converter="{StaticResource OAuthServiceLoginStatusConverter}">
                     <Binding Path="Name"/>
-                    <Binding Path="AuthenticationData"/>
+                    <Binding Path="CurrentUserName"/>
                 </MultiBinding>
             </MenuItem.Header>
         </MenuItem>

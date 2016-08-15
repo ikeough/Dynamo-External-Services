@@ -10,9 +10,9 @@ namespace ExternalServicesViewExtension
     /// </summary>
     public partial class LoginForm : Window
     {
-        private IExternalService<IOAuthAuthenticationData> service;
+        private IExternalService service;
 
-        public LoginForm(IExternalService<IOAuthAuthenticationData> service)
+        public LoginForm(IExternalService service)
         {
             InitializeComponent();
 
@@ -35,7 +35,7 @@ namespace ExternalServicesViewExtension
             }
             try
             {
-                service.ParseRedirectResponse(e.Uri);
+                FinishAuthentication(e.Uri);
             }
             catch (ArgumentException)
             {
@@ -46,6 +46,13 @@ namespace ExternalServicesViewExtension
                 e.Cancel = true;
                 this.Close();
             }
+        }
+
+        private async void FinishAuthentication(Uri uri)
+        {
+            var authenticationCode = service.ExtractAuthorizationCodeFromRedirectRequest(uri);
+            var token = await service.GetAccessTokenAsync(authenticationCode);
+            service.AccessToken = token;
         }
 
         private void CancelClick(object sender, RoutedEventArgs e)

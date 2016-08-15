@@ -37,7 +37,6 @@
   <ItemGroup>
     <Compile Include="IExternalService.cs" />
     <Compile Include="IExternalServices.cs" />
-    <Compile Include="IOAuthService.cs" />
     <Compile Include="ITokenStore.cs" />
     <Compile Include="OAuthServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

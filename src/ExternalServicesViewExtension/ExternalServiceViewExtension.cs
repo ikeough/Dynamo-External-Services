@@ -82,14 +82,9 @@ namespace ExternalServicesViewExtension
         public object Convert(object[] value, Type targetType, object parameter, CultureInfo culture)
         {
             var serviceName = value[0].ToString();
-            var authData = value[1] as IOAuthAuthenticationData;
+            var userName = value[1].ToString();
 
-            if (authData == null)
-            {
-                return serviceName + " : Login...";
-            }
-
-            return serviceName + " : Logout (" + authData.CurrentUserName + ")";
+            return serviceName + " : Logout (" + userName + ")";
         }
 
         object[] IMultiValueConverter.ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)

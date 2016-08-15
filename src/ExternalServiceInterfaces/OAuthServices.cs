@@ -5,10 +5,10 @@ namespace ExternalServiceInterfaces
     /// <summary>
     /// OAuthServices is a singleton which is backed by a collection of IOAuthServices.
     /// </summary>
-    public class OAuthServices : IExternalServices<IOAuthService>
+    public class OAuthServices : IExternalServices<IExternalService>
     {
         private static OAuthServices instance;
-        private Dictionary<string, IOAuthService> services = new Dictionary<string, IOAuthService>();
+        private Dictionary<string, IExternalService> services = new Dictionary<string, IExternalService>();
          
         public static OAuthServices Instance
         {
@@ -24,12 +24,12 @@ namespace ExternalServiceInterfaces
             
         }
 
-        public IEnumerable<IOAuthService> Services
+        public IEnumerable<IExternalService> Services
         {
             get { return services.Values; }
         }
 
-        public void AddService(IOAuthService service)
+        public void AddService(IExternalService service)
         {
             if (!services.ContainsKey(service.Name))
             {
@@ -37,7 +37,7 @@ namespace ExternalServiceInterfaces
             }
         }
 
-        public void RemoveService(IOAuthService service)
+        public void RemoveService(IExternalService service)
         {
             if (services.ContainsKey(service.Name))
             {
@@ -45,7 +45,7 @@ namespace ExternalServiceInterfaces
             }
         }
 
-        public IOAuthService GetServiceByName(string serviceName)
+        public IExternalService GetServiceByName(string serviceName)
         {
             return services.ContainsKey(serviceName) ? services[serviceName] : null;
         }
