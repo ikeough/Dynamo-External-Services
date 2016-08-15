@@ -7,8 +7,8 @@
     <ProjectGuid>{3D3E5A1D-8E1A-4315-A4B1-64C86ADFE3E2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExternalServicesViewExtension</RootNamespace>
-    <AssemblyName>ExternalServicesViewExtension</AssemblyName>
+    <RootNamespace>Dynamo.ExternalServices.Extensions</RootNamespace>
+    <AssemblyName>Dynamo.ExternalServices.ViewExtension</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -139,6 +139,10 @@
       <Project>{35731695-da79-4a87-8b77-aef10683edf2}</Project>
       <Name>ExternalServiceInterfaces</Name>
       <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\ExternalServiceTokens\ExternalServicesTokens.csproj">
+      <Project>{87e3fb8c-455c-4bef-91e5-445451356746}</Project>
+      <Name>ExternalServicesTokens</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

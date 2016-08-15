@@ -8,9 +8,8 @@ using System.Windows.Data;
 using System.Windows.Media;
 using Dynamo.Controls;
 using Dynamo.Wpf.Extensions;
-using ExternalServiceInterfaces;
 
-namespace ExternalServicesViewExtension
+namespace Dynamo.ExternalServices.Extensions
 {
     public class ExternalServicesViewExtension : IViewExtension
     {
@@ -34,7 +33,7 @@ namespace ExternalServicesViewExtension
             var servicesMenu = new MenuItem() {Header = "External Services"};
             menu.Items.Add(servicesMenu);
 
-            foreach (var service in OAuthServices.Instance.Services)
+            foreach (var service in ExternalServices.Instance.Services)
             {
                 var serviceMenuItem = new ExternalServiceMenuItem {DataContext = service};
                 servicesMenu.Items.Add(serviceMenuItem);
@@ -82,9 +81,10 @@ namespace ExternalServicesViewExtension
         public object Convert(object[] value, Type targetType, object parameter, CultureInfo culture)
         {
             var serviceName = value[0].ToString();
-            var userName = value[1].ToString();
+            var userName = value[1] == null ? string.Empty : value[1].ToString();
+            var token = value[2];
 
-            return serviceName + " : Logout (" + userName + ")";
+            return serviceName + (token == null? " : Login" : " : Logout (" + userName + ")");
         }
 
         object[] IMultiValueConverter.ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)

@@ -7,8 +7,8 @@
     <ProjectGuid>{89084C7C-3FD7-4D69-B38E-8E24D40F929E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExternalServicesExtension</RootNamespace>
-    <AssemblyName>ExternalServicesExtension</AssemblyName>
+    <RootNamespace>Dynamo.ExternalServices.Extensions</RootNamespace>
+    <AssemblyName>Dynamo.ExternalServices.Extension</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

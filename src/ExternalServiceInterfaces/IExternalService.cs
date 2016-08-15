@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Threading.Tasks;
 
-namespace ExternalServiceInterfaces
+namespace Dynamo.ExternalServices
 {
     public interface IExternalService: INotifyPropertyChanged
     {

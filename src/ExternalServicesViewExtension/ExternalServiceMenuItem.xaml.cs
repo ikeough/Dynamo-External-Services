@@ -1,8 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using ExternalServiceInterfaces;
 
-namespace ExternalServicesViewExtension
+namespace Dynamo.ExternalServices.Extensions
 {
     /// <summary>
     /// Interaction logic for ExternalServiceMenuItem.xaml

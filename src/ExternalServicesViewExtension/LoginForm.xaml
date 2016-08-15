@@ -1,12 +1,12 @@
-<Window x:Class="ExternalServicesViewExtension.LoginForm"
+<Window x:Class="Dynamo.ExternalServices.Extensions.LoginForm"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:externalServicesViewExtension="clr-namespace:ExternalServicesViewExtension"
+        xmlns:extensions="clr-namespace:Dynamo.ExternalServices.Extensions"
         Title="Authenticate" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow"
         >
     <Grid>
         <Grid.Resources>
-            <externalServicesViewExtension:OAuthServiceAuthenticationMessageConverter x:Key="AuthServiceAuthenticationMessageConverter"/>
+            <extensions:OAuthServiceAuthenticationMessageConverter x:Key="AuthServiceAuthenticationMessageConverter"/>
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

@@ -1,9 +1,9 @@
 using System;
 using System.Windows;
 using System.Windows.Navigation;
-using ExternalServiceInterfaces;
+using Dynamo.ExternalServices.Tokens;
 
-namespace ExternalServicesViewExtension
+namespace Dynamo.ExternalServices.Extensions
 {
     /// <summary>
     /// Interaction logic for UserControl1.xaml
@@ -53,6 +53,9 @@ namespace ExternalServicesViewExtension
             var authenticationCode = service.ExtractAuthorizationCodeFromRedirectRequest(uri);
             var token = await service.GetAccessTokenAsync(authenticationCode);
             service.AccessToken = token;
+
+            // Add the token to the token store.
+            AccessTokens.Instance.Add(service.Name, new OAuthToken(token));
         }
 
         private void CancelClick(object sender, RoutedEventArgs e)

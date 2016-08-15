@@ -1,4 +1,4 @@
 <ExtensionDefinition>
-  <AssemblyPath>C:\Users\Ian\Documents\GitHub\Dynamo-External-Services\src\bin\Debug\ExternalServicesExtension.dll</AssemblyPath>
-  <TypeName>ExternalServicesExtension.ExternalServicesExtension</TypeName>
+  <AssemblyPath>C:\Users\Ian\Documents\GitHub\Dynamo-External-Services\src\bin\Debug\Dynamo.ExternalServices.Extension.dll</AssemblyPath>
+  <TypeName>Dynamo.ExternalServices.Extensions.ExternalServicesExtension</TypeName>
 </ExtensionDefinition>

@@ -7,8 +7,8 @@
     <ProjectGuid>{35731695-DA79-4A87-8B77-AEF10683EDF2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExternalServiceInterfaces</RootNamespace>
-    <AssemblyName>ExternalServiceInterfaces</AssemblyName>
+    <RootNamespace>Dynamo.ExternalServices</RootNamespace>
+    <AssemblyName>Dynamo.ExternalServices.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -38,7 +38,7 @@
     <Compile Include="IExternalService.cs" />
     <Compile Include="IExternalServices.cs" />
     <Compile Include="ITokenStore.cs" />
-    <Compile Include="OAuthServices.cs" />
+    <Compile Include="ExternalServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

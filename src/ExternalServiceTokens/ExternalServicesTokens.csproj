@@ -7,8 +7,8 @@
     <ProjectGuid>{87E3FB8C-455C-4BEF-91E5-445451356746}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExternalServicesTokens</RootNamespace>
-    <AssemblyName>ExternalServicesTokens</AssemblyName>
+    <RootNamespace>Dynamo.ExternalServices.Tokens</RootNamespace>
+    <AssemblyName>Dynamo.ExternalServices.Tokens</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

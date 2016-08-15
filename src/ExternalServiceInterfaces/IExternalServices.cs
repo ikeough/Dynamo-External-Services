@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ExternalServiceInterfaces
+namespace Dynamo.ExternalServices
 {
     public interface IExternalServices<TService>
     {

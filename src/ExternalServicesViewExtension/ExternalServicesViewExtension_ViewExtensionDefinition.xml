@@ -1,4 +1,4 @@
 <ViewExtensionDefinition>
-  <AssemblyPath>C:\Users\Ian\Documents\GitHub\Dynamo-External-Services\src\bin\Debug\ExternalServicesViewExtension.dll</AssemblyPath>
-  <TypeName>ExternalServicesViewExtension.ExternalServicesViewExtension</TypeName>
+  <AssemblyPath>C:\Users\Ian\Documents\GitHub\Dynamo-External-Services\src\bin\Debug\Dynamo.ExternalServices.ViewExtension.dll</AssemblyPath>
+  <TypeName>Dynamo.ExternalServices.Extensions.ExternalServicesViewExtension</TypeName>
 </ViewExtensionDefinition>

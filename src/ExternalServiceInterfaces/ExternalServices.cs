@@ -1,25 +1,25 @@
 ﻿using System.Collections.Generic;
 
-namespace ExternalServiceInterfaces
+namespace Dynamo.ExternalServices
 {
     /// <summary>
-    /// OAuthServices is a singleton which is backed by a collection of IOAuthServices.
+    /// ExternalServices is a singleton which is backed by a collection of IExternalServices.
     /// </summary>
-    public class OAuthServices : IExternalServices<IExternalService>
+    public class ExternalServices : IExternalServices<IExternalService>
     {
-        private static OAuthServices instance;
+        private static ExternalServices instance;
         private Dictionary<string, IExternalService> services = new Dictionary<string, IExternalService>();
          
-        public static OAuthServices Instance
+        public static ExternalServices Instance
         {
             get
             {
-                instance = instance ?? new OAuthServices();
+                instance = instance ?? new ExternalServices();
                 return instance;
             }
         }
 
-        private OAuthServices()
+        private ExternalServices()
         {
             
         }
