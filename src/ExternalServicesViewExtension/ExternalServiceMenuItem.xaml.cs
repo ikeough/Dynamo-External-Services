@@ -6,7 +6,7 @@ namespace Dynamo.ExternalServices.Extensions
     /// <summary>
     /// Interaction logic for ExternalServiceMenuItem.xaml
     /// </summary>
-    public partial class ExternalServiceMenuItem : UserControl
+    public partial class ExternalServiceMenuItem : MenuItem
     {
         public ExternalServiceMenuItem()
         {

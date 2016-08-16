@@ -30,14 +30,8 @@ namespace Dynamo.ExternalServices.Extensions
             var menu = FindVisualChildren<Menu>(view).FirstOrDefault();
             if (menu == null) return;
 
-            var servicesMenu = new MenuItem() {Header = "External Services"};
+            var servicesMenu = new ExternalServicesMenu ();
             menu.Items.Add(servicesMenu);
-
-            foreach (var service in ExternalServices.Instance.Services)
-            {
-                var serviceMenuItem = new ExternalServiceMenuItem {DataContext = service};
-                servicesMenu.Items.Add(serviceMenuItem);
-            }
         }
 
         public void Shutdown()
