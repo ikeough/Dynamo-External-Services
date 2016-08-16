@@ -75,7 +75,7 @@ namespace Dynamo.ExternalServices.Extensions
         public object Convert(object[] value, Type targetType, object parameter, CultureInfo culture)
         {
             var serviceName = value[0].ToString();
-            var userName = value[1] == null ? string.Empty : value[1].ToString();
+            var userName = value[1]?.ToString() ?? string.Empty;
             var token = value[2];
 
             return serviceName + (token == null? " : Login" : " : Logout (" + userName + ")");
